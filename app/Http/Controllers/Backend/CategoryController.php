@@ -17,6 +17,7 @@ class CategoryController extends Controller
     }
     public function categoryview(){
         $cats = Category::with('product')->orderBy('id','DESC')->get();
+
         /*
         $cats = DB::table('categories')
             ->leftJoin('products',function ($join){

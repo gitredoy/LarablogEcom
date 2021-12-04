@@ -193,6 +193,8 @@ class ProductController extends Controller
             @unlink(public_path('upload/products/'.$simg-> sub_image));
             $simg->delete();
         }
+        ProductColor::where('product_id',$product->id)->delete();
+        ProductSize::where('product_id',$product->id)->delete();
         $product ->delete();
         return redirect()->back();
     }
@@ -206,5 +208,12 @@ class ProductController extends Controller
         @unlink(public_path('upload/products/'.$productImage-> sub_image));
         $productImage->delete();
         return response()->json($productImage);
+    }
+
+    public function singleView($slug_name){
+        $this->data['product']    = Product::where('slug_name',$slug_name)->first();
+        $this->data['colors'] = ProductColor::with('productcolor')->where('product_id',$this->data['product']->id)->get();
+        $this->data['sizes'] = ProductSize::with('productsize')->where('product_id',$this->data['product']->id)->get();
+        return view('backend.product.singleProduct',$this->data);
     }
 }

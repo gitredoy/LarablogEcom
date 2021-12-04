@@ -53,8 +53,8 @@
             <nav class="limiter-menu-desktop container">
 
                 <!-- Logo desktop -->
-                <a href="index.html" class="logo">
-                    <img src="{{asset('public/frontend')}}/images/logo/logo.png" alt="IMG-LOGO">
+                <a href="{{route('home.frontend')}}" class="logo">
+                    <img src="{{asset('public/upload/logo/'.$flogo->image)}}" alt="IMG-LOGO">
                 </a>
 
                 <!-- Menu desktop -->
@@ -103,7 +103,9 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="{{asset('public/frontend')}}/images/logo/logo.png" alt="IMG-LOGO"></a>
+            <a href="{{route('home.frontend')}}" class="logo">
+                <img src="{{asset('public/upload/logo/'.$flogo->image)}}" alt="IMG-LOGO">
+            </a>
         </div>
 
         <!-- Icon header -->

@@ -104,6 +104,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/add', 'Backend\ProductController@add')->name('products.add');
         Route::post('/store', 'Backend\ProductController@store')->name('products.store');
         Route::get('/edit/{slug_name}', 'Backend\ProductController@edit')->name('products.edit');
+        Route::get('/single/view/{slug_name}', 'Backend\ProductController@singleView')->name('products.single.view');
         Route::put('/update/{id}', 'Backend\ProductController@update')->name('products.update');
         Route::get('/delete/{id}', 'Backend\ProductController@delete')->name('products.delete');
         Route::get('/show-multiple-image/{id}', 'Backend\ProductController@showMultiple')->name('products.multiple.show');

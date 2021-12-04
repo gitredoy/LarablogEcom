@@ -23,7 +23,7 @@ class LogoController extends Controller
           $file = $request->file('image');
           $extension = $file->getClientOriginalExtension();
           $image = 'Logo'.rand().'.'.$extension;
-          Image::make($file)->resize('220','57')->save(public_path('upload/logo/'.$image));
+          Image::make($file)->resize('160','50')->save(public_path('upload/logo/'.$image));
           $logo-> image = $image;
 
       }

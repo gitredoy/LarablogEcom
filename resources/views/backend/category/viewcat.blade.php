@@ -217,7 +217,10 @@
                         info = info + "<td>"+ value['created_at']+"</td>";
                         info = info + "<td>";
                         info = info + "<button onclick='editFromData("+value.id+")' style='margin-right: 2px' class='btn btn-sm btn-primary  '>Edit</button>";
-                        info = info + "<button onclick='deleteFromData("+value.id+")' class='btn btn-sm btn-danger '>Delete</button>";
+                        if (value['formattedDate'] === 0){
+                            info = info + "<button onclick='deleteFromData("+value.id+")' class='btn btn-sm btn-danger '>Delete</button>";
+                        }
+
                         info = info + "</td>";
                         info = info + "</tr>";
                     })

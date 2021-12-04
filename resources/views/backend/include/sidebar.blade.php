@@ -219,6 +219,24 @@
                     </ul>
                 </li>
 
+               <li class="nav-item   {{request()->is('pp*') ? 'menu-open' : ''}}">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>Manage Setting
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('products.view')}}"
+                                   class="nav-link  {{request()->is('products*') ? 'active' : ''}}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>View Setting</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

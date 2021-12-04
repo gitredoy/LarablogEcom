@@ -30,7 +30,7 @@
             <!-- Main row -->
             <div class="row justify-content-md-center">
                 <!-- Left col -->
-                <section class="col-md-11">
+                <section class="col-md-12">
                     <!-- Custom tabs (Charts with tabs)-->
                     <div class="card">
                         <div class="card-header">
@@ -76,6 +76,7 @@
 
                                       </td>
                                       <td>
+                                          <a href="{{route('products.single.view',['slug_name'=>$pro->slug_name])}}" class="btn btn-sm btn-secondary " title="Edit"><i class="fa fa-eye"></i></a>
                                           <a href="{{route('products.edit',['slug_name'=>$pro->slug_name])}}" class="btn btn-sm btn-primary " title="Edit"><i class="fa fa-edit"></i></a>
                                           <a id="deleteData" href="{{route('products.delete',['id'=>$pro->id])}}" class="btn btn-sm btn-danger " title="Edit"><i class="fa fa-trash"></i></a>
                                       </td>
